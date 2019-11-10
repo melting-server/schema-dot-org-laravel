@@ -1,0 +1,39 @@
+{
+  "name": "melting-server/schema-dot-org-laravel",
+  "description": "Provides melting-server/schema-dot-org-tree into laravel.",
+  "license": "MIT",
+  "homepage": "https://github.com/melting-server/schema-dot-org-laravel",
+  "authors": [
+    {
+      "name": "Jason Steelman"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Schema\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "illuminate/support": "~6.1",
+    "melting-server/schema-dot-org-tree": "dev-master"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Schema\\SchemaServiceProvider"
+      ]
+    }
+  },
+  "repositories": {
+    "local3": {
+      "type": "path",
+      "url": "../schemaDotOrgTree",
+      "symlink": true,
+      "options": {
+        "symlink": true
+      }
+    }
+  }
+}
